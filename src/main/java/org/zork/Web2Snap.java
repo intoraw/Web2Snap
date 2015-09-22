@@ -21,9 +21,10 @@ public class Web2Snap {
 
   public static boolean init(String fname_in, String fname_out){
     boolean ok = true;
+    System.out.println("Load graph with input : " + fname_in + " output : " + fname_out);
     try {
       // init ig
-      ig.loadOffline(fname_in);
+      ig = ImmutableGraph.loadOffline(fname_in);
       num_v = ig.numNodes();
       num_e = ig.numArcs();
 
@@ -51,6 +52,7 @@ public class Web2Snap {
   }
 
   public static void visit_all(){
+    ni = ig.nodeIterator();
     while (ni.hasNext()){
       long src = ni.nextLong();
       LazyLongIterator adj_it = ni.successors();

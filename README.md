@@ -6,4 +6,4 @@ Build :
 `mvn package`
 
 Run : 
-`java -cp target/Web2Snap-1.0-SNAPSHOT.jar org.zork.Web2Snap <webgraph_file> <output_snap_file>`
+`java -cp target/Web2Snap-1.0-SNAPSHOT-jar-with-dependencies.jar org.zork.Web2Snap <webgraph_file> <output_snap_file>`
