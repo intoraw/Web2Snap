@@ -65,9 +65,9 @@ public class Web2Snap {
   public static void main(String args[]) {
 
     if (args.length != 2) {
-      System.out.println("Invalid args.\n ./app <input_file> <output_file>");
+      System.out.println("Invalid args.\n X.jar org.zork.Web2snap.java  <input_file> <output_file>");
     }
-    init(args[1], args[2]);
+    init(args[0], args[1]);
     visit_all();
     System.out.println("Dump ok.");
     System.out.println("Num V : " + num_v + " Num E : " + num_e + " Count E : " + count_e);
